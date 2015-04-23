@@ -21,37 +21,37 @@ var pg = require('pg');
  * Username for the main database
  * @type {string}
  */
-var gisDatabaseUser = 'gustavosoria';
+var gisDatabaseUser = 'to_fill';
 
 /**
  * Name of the main database
  * @type {string}
  */
-var gisDatabaseName = 'gis';
+var gisDatabaseName = 'to_fill'';
 
 /**
  * Address of the main database
  * @type {string}
  */
-var gisDatabaseAddress = 'localhost';
+var gisDatabaseAddress = 'to_fill'';
 
 /**
  * Username for the temporary database
  * @type {string}
  */
-var tempDatabaseUser = 'gustavosoria';
+var tempDatabaseUser = 'to_fill'';
 
 /**
  * Name of the temporary database
  * @type {string}
  */
-var tempDatabaseName = 'gis_temp';
+var tempDatabaseName = 'to_fill'';
 
 /**
  * Address of the temporary database
  * @type {string}
  */
-var tempDatabaseAddress = 'localhost';
+var tempDatabaseAddress = 'to_fill'';
 
 /**
  * Connection string for the main database
