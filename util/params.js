@@ -15,7 +15,7 @@ var GIS = 0;
  * Variable which represents the temporary database
  * @type {number}
  */
-var TEMP = 1;
+var TEMP = 0;
 
 /**
  * Variable which represents the table of the lines

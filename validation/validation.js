@@ -70,9 +70,10 @@ var assertId = function (callback){
  * Otherwise an error is printed and the process terminates.
  * @param obj Object to check
  */
-var assertNotUndefined = function(obj){
+var assertNotUndefined = function(obj, message){
     if (obj === undefined || obj === null){
-        log.error("Obj is null or undefined");
+        log.error("Obj is null or undefined: "+message);
+//        log.error(callback);
     }
 }
 

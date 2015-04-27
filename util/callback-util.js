@@ -22,6 +22,8 @@ var next = function(callback, error){
     if (_next) {
         _next(callback);
     } else {
+
+        log.warning(callback);
         log.warning(error);
     }
 }

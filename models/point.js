@@ -10,7 +10,8 @@
  * @type {{table: string, styleTable: string, osmId: string, isDeleted: string, typeId: string, geom: string}}
  */
 var model = {
-    table : "planet_osm_point",
+    mainTable : "osm_point",
+    tempTable : "planet_osm_point",
     nameTable : "point_names",
     nameRelTable : "point_names_rel",
     styleTable : "point_style_properties",

@@ -31,11 +31,11 @@ var debug = require('./util/debug.js');
 
 /**
  * Short link for the variable of the temporary database
- * @type {exports.TEMP|*}
+ * @type {exports.GIS|*}
  */
 var GIS = params.GIS;
 
 /*
 execute the clean process
  */
-database.execute(GIS, queries.cleanTemp(), [], {list: [debug.end]});
+database.execute(GIS, queries.cleanMain(), [], {list: [debug.end]});

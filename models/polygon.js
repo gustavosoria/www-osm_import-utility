@@ -10,7 +10,8 @@
  * @type {{table: string, styleTable: string, osmId: string, isDeleted: string, typeId: string, geom: string}}
  */
 var model = {
-    table : "planet_osm_polygon",
+    mainTable : "osm_polygon",
+    tempTable : "planet_osm_polygon",
     nameTable : "polygon_names",
     nameRelTable : "polygon_names_rel",
     styleTable : "polygon_style_properties",

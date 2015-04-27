@@ -85,7 +85,8 @@ var getNameTable = function(callback){
     /*
      validation of the table variable
      */
-    val.assertNotUndefined(table);
+
+    val.assertNotUndefined(table, 'ndq02');
 
     return table;
 }
@@ -136,7 +137,7 @@ var getNameRelTable = function(callback){
     /*
      validation of the table variable
      */
-    val.assertNotUndefined(table);
+    val.assertNotUndefined(table, 'ndq01');
 
     return table;
 }

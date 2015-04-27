@@ -21,49 +21,25 @@ var pg = require('pg');
  * Username for the main database
  * @type {string}
  */
-var gisDatabaseUser = 'to_fill';
+var gisDatabaseUser = 'gustavosoria';
 
 /**
  * Name of the main database
  * @type {string}
  */
-var gisDatabaseName = 'to_fill'';
+var gisDatabaseName = 'gis';
 
 /**
  * Address of the main database
  * @type {string}
  */
-var gisDatabaseAddress = 'to_fill'';
-
-/**
- * Username for the temporary database
- * @type {string}
- */
-var tempDatabaseUser = 'to_fill'';
-
-/**
- * Name of the temporary database
- * @type {string}
- */
-var tempDatabaseName = 'to_fill'';
-
-/**
- * Address of the temporary database
- * @type {string}
- */
-var tempDatabaseAddress = 'to_fill'';
+var gisDatabaseAddress = 'localhost';
 
 /**
  * Connection string for the main database
  * @type {string}
  */
 var gisDatabase = "postgres://"+gisDatabaseUser+":@"+gisDatabaseAddress+"/"+gisDatabaseName+"";
-
-/**
- * Connection string for the temporary database
- * @type {string}
- */
-var tempDatabase = "postgres://"+tempDatabaseUser+":@"+tempDatabaseAddress+"/"+tempDatabaseName+"";
 
 /**
  * Short link for the variable of the main database
@@ -86,26 +62,23 @@ var TEMP = params.TEMP;
  */
 var executeQuery = function(database, query, params, callback){
 
-    /**
-     * The connection string is inited according to the given database
-     * @type {string}
-     */
-    var connString = (database === GIS) ? gisDatabase : tempDatabase;
-
     /*
     connection
      */
-    pg.connect(connString, function(err, client, done) {
+    pg.connect(gisDatabase, function(err, client, done) {
         if(err) {
             return console.error('error fetching client from pool', err);
         }
         client.query(query, params, function(err, result) {
             done();
             if(err) {
+//                console.log("error");
                 if (callback && callback.onError){
                     callback.onError(callback);
+                } else {
+                    console.error('error running query\n'+query+"\n"+params+"\n", err);
                 }
-//                return console.error('error running query\n'+query+"\n"+params+"\n", err);
+//                return
             } else {
                 /*
                 At this step the query has been correctly executed

@@ -10,7 +10,8 @@
  * @type {{table: string, styleTable: string, osmId: string, isDeleted: string, typeId: string, geom: string}}
  */
 var model = {
-    table : "planet_osm_roads",
+    mainTable : "osm_roads",
+    tempTable : "planet_osm_roads",
     nameTable : "road_names",
     nameRelTable : "road_names_rel",
     styleTable : "roads_style_properties",
