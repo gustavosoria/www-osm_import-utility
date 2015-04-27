@@ -21,19 +21,19 @@ var pg = require('pg');
  * Username for the main database
  * @type {string}
  */
-var gisDatabaseUser = 'gustavosoria';
+var gisDatabaseUser = 'database_user';
 
 /**
  * Name of the main database
  * @type {string}
  */
-var gisDatabaseName = 'gis';
+var gisDatabaseName = 'database_name';
 
 /**
  * Address of the main database
  * @type {string}
  */
-var gisDatabaseAddress = 'localhost';
+var gisDatabaseAddress = 'database_address';
 
 /**
  * Connection string for the main database
